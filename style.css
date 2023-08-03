@@ -194,6 +194,9 @@ li.dropdown {
 .slide-controller:nth-child(4):checked~.slide-show .slides-list {
   --selected-item: 3;
 }
+.slide-controller:nth-child(4):checked~.slide-show .slides-list {
+  --selected-item: 4;
+}
 
 <style>
  @import url(tiny.css) (min-width:300px);
