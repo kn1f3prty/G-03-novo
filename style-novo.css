@@ -224,21 +224,3 @@ li.dropdown {
 @media screen and (max-width: 600px) {
 /* Estilos */	
 }
-
-@media screen and
-(min-width: 200px) and
-(max-width: 640px)  {
-/* Estilos */	
-}
-
-@media screen and
-(min-width: 600px) and
-(orientation:landscape)  {
-/* Estilos */	
-}
-
-@media screen and
-(max-width: 380px) and
-(orientation:portrait)  {
-/* Estilos */	
-}
