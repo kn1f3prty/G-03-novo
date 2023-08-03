@@ -41,6 +41,53 @@
  
   <p><img class="trabfisica" img width="700px" height="700px" src="trabfisica.png" alt="trabalho Robotica"></p> 
 
+    <section class="carrosel">
+    <h2 class="corpo-titulo">Acompanhe as novidades:</h2>
+    <div class="slide-show">
+        <ul class="slides-list" style="left:calc(0%)">
+            <li class="slide">
+                <a href="Quimica.html>">
+                    <img class="redondo" src="quimica-isomeria.jpg">
+                </a>
+            </li>
+            <li class="slide">
+                <a href="Robotica.html">
+                    <img class="redondo" src="robotica.jpg">
+                </a>
+            </li>
+            <li class="slide">
+                <a href="Portugues.html">
+                    <img class="redondo" src="pt02.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <input type="radio" class="slide-controller" name="slide" checked />
+        <input type="radio" class="slide-controller" name="slide" />
+        <input type="radio" class="slide-controller" name="slide" />
+      </section> 
+      <script>
+        const slideControllers = document.querySelectorAll('.slide-controller');
+        const slidesList = document.querySelector('.slides-list');
+        let currentSlide = 0;
+
+        // Adicionar um evento de clique para cada controlador de slide
+        slideControllers.forEach((controller, index) => {
+            controller.addEventListener('click', () => {
+                currentSlide = index;
+                slidesList.style.left = `calc(${index} * -100%)`;
+            });
+        });
+
+        // Função para alterar os slides automaticamente após 20 segundos
+        function autoChangeSlide() {
+            currentSlide = (currentSlide + 1) % slideControllers.length;
+            slideControllers[currentSlide].checked = true;
+            slidesList.style.left = `calc(${currentSlide} * -100%)`;
+        }
+        // Definir um temporizador para alternar automaticamente os slides a cada 20 segundos (20000 milissegundos)
+        setInterval(autoChangeSlide, 10000);
+    </script>
 
   <h2>
     <p>O que você achou do nosso site?</p>
