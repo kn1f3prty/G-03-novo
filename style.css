@@ -196,7 +196,7 @@ li.dropdown {
 .slide-controller:nth-child(4):checked~.slide-show .slides-list {
   --selected-item: 3;
 }
-.slide-controller:nth-child(4):checked~.slide-show .slides-list {
+.slide-controller:nth-child(5):checked~.slide-show .slides-list {
   --selected-item: 4;
 }
 
