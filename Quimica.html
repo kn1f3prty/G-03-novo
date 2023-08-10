@@ -26,29 +26,44 @@
 
 <!-- seção dos amigos correspondente a seção escola -->
     <section class="escola">
-<h1>
-<p>Maquete Molecula De Morfina</p>         
-<p>2ºH</p>
-<p>Participante:</p>
-<p>Bianca N12; Maria Clara N36; Marian N37 </p>
+  <section class="carrosel">
+    <h2 class="corpo-titulo">Trabalhos:</h2>
+    <div class="slide-show">
+        <ul class="slides-list" style="left:calc(0%)">
+            <li class="slide">
+                    <img class="redondo" src="mmorfina.jpeg">
+            </li>
+            <li class="slide">
+                    <img class="redondo" src="mcafe.jpeg">
+        </ul>
+    </div>
+    <input type="radio" class="slide-controller" name="slide" checked />
+        <input type="radio" class="slide-controller" name="slide" />
+        <input type="radio" class="slide-controller" name="slide" />
+          <input type="radio" class="slide-controller" name="slide" />
+      </section> 
+      <script>
+        const slideControllers = document.querySelectorAll('.slide-controller');
+        const slidesList = document.querySelector('.slides-list');
+        let currentSlide = 0;
 
-  </h2>
- 
-  <p><img class="Quimica" img width="300px" height="300px" src="mmorfina.jpeg" alt="Molecula de Morfina"></p>  
-   
-</section>
-    <h1>
-<p>Maquete Molecula De Cafe</p>         
-<p>2ºH</p>
-<p>Participante:</p>
-<p>Julia M. N31; Joao V. Nascimento N27; Leila N32 </p>
+        // Adicionar um evento de clique para cada controlador de slide
+        slideControllers.forEach((controller, index) => {
+            controller.addEventListener('click', () => {
+                currentSlide = index;
+                slidesList.style.left = `calc(${index} * -100%)`;
+            });
+        });
 
-  </h2>
- 
-  <p><img class="Quimica" img width="300px" height="300px" src="mcafe.jpeg" alt="Molecula de Cafe"></p>  
-   
-</section>
-
+        // Função para alterar os slides automaticamente após 20 segundos
+        function autoChangeSlide() {
+            currentSlide = (currentSlide + 1) % slideControllers.length;
+            slideControllers[currentSlide].checked = true;
+            slidesList.style.left = `calc(${currentSlide} * -100%)`;
+        }
+        // Definir um temporizador para alternar automaticamente os slides a cada 20 segundos (20000 milissegundos)
+        setInterval(autoChangeSlide, 10000);
+    </script>
    
 </section>
 
