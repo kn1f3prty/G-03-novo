@@ -199,5 +199,35 @@ li.dropdown {
 .slide-controller:nth-child(5):checked~.slide-show .slides-list {
   --selected-item: 4;
 }
+.slide-controller:nth-child(2):checked~.slide-show .slides-list {
+  --selected-item: 5;
+}
+
+.slide-controller:nth-child(3):checked~.slide-show .slides-list {
+  --selected-item: 6;
+}
+
+.slide-controller:nth-child(4):checked~.slide-show .slides-list {
+  --selected-item: 7;
+}
+.slide-controller:nth-child(5):checked~.slide-show .slides-list {
+  --selected-item: 8;
+}
+
+.slide-controller:nth-child(2):checked~.slide-show .slides-list {
+  --selected-item: 9;
+}
+
+.slide-controller:nth-child(3):checked~.slide-show .slides-list {
+  --selected-item: 10;
+}
+
+.slide-controller:nth-child(4):checked~.slide-show .slides-list {
+  --selected-item: 11;
+}
+.slide-controller:nth-child(5):checked~.slide-show .slides-list {
+  --selected-item: 12;
+}
+
 
 
