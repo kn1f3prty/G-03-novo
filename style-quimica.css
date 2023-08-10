@@ -189,7 +189,4 @@ li.dropdown {
   --selected-item: 1;
 }
 
-.slide-controller:nth-child(3):checked~.slide-show .slides-list {
-  --selected-item: 2;
-}
 
