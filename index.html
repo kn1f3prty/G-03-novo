@@ -99,6 +99,14 @@ myMusic.pause();
             slideControllers[currentSlide].checked = true;
             slidesList.style.left = `calc(${currentSlide} * -100%)`;
         }
+	  // Adicionar um evento de clique para cada controlador de slide
+        slideControllers.forEach((controller, index) => {
+            controller.addEventListener('click', () => {
+                currentSlide = index;
+                slidesList.style.left = `calc(${index} * -100%)`;
+            });
+        });
+
         // Definir um temporizador para alternar automaticamente os slides a cada 20 segundos (20000 milissegundos)
         setInterval(autoChangeSlide, 10000);
   </script>
