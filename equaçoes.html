@@ -34,6 +34,22 @@
 		<input type="button" onClick="multiplyBy()"
 		Value="Multiply" /><br>
 	</form>
+	 <p>The Result is : <br>
+   <span id = "result"></span>
+  </p>
+  
+  
+  <script>
+    function multiplyBy()
+    {
+      num1 = document.getElementById(
+        "firstNumber").value;
+      num2 = document.getElementById(
+        "secondNumber").value;
+      document.getElementById(
+        "result").innerHTML = num1 * num2;
+    }
+  </script>
 <!-- seção dos amigos correspondente a seção escola -->
 <section class="escola">
 
