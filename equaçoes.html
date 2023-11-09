@@ -81,6 +81,49 @@
     <input type="date" id="diaa" name="diaa" />
   </div>
 </form>
+	<form>
+  <p>
+    <fieldset>
+      <legend>Título<abbr title="Este campo é obrigatório">*</abbr></legend>
+      <input type="radio" required name="title" id="r1" value="Mr"><label for="r1">Sr.</label>
+      <input type="radio" required name="title" id="r2" value="Ms"><label for="r2">Sra.</label>
+    </fieldset>
+  </p>
+  <p>
+    <label for="n1">Quantos anos você tem?</label>
+    <!-- O atributo pattern pode atuar como um substituto para navegadores que
+         não implemente o tipo de entrada de número, mas dê suporte ao atributo pattern.
+         Observe que os navegadores que suportam o atributo pattern o tornarão
+         falha silenciosamente quando usado com um campo numérico.
+         Seu uso aqui atua apenas como um fallback -->
+    <input type="number" min="12" max="120" step="1" id="n1" name="age"
+           pattern="\d+">
+  </p>
+  <p>
+    <label for="t1">Qual é a sua fruta favorita?<abbr title="Este campo é obrigatório">*</abbr></label>
+    <input type="text" id="t1" name="fruit" list="l1" required
+           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <datalist id="l1">
+      <option>Banana</option>
+      <option>Cereja</option>
+      <option>Maçã</option>
+      <option>Morango</option>
+      <option>Limão</option>
+      <option>Laranja</option>
+    </datalist>
+  </p>
+  <p>
+    <label for="t2">Qual é o seu e-mail?</label>
+    <input type="email" id="t2" name="email">
+  </p>
+  <p>
+    <label for="t3">Deixe uma mensagem curta</label>
+    <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+  </p>
+  <p>
+    <button>Enviar</button>
+  </p>
+</form>
 <!-- seção dos amigos correspondente a seção escola -->
 <section class="escola">
 
